@@ -72,6 +72,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'category.context_processors.menu_links',
                 'carts.context_processors.counter',
+                'accounts.context_processors.get_paypal_client_id',
             ],
         },
     },
@@ -157,3 +158,8 @@ EMAIL_USE_TLS = True
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+PAYPAL_CLIENT_ID = config('PAYPAL_CLIENT_ID')
+
+# To open the payment pop-up
+SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
