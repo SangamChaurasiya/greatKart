@@ -1,0 +1,11 @@
+{% autoescape off %}
+
+Hi {{ user.first_name }},
+
+Your order has been recevied.
+
+Order Number: {{ order.order_number }}
+
+If you think it's not you, please ignore this email.
+
+{% endautoescape %}
